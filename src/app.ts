@@ -18,7 +18,6 @@ app.use("/api", userRoutes);
 (async () => {
   const db = await connectToDatabase();
 
-  // Create a table if it doesn't exist
   await db.run(`
     CREATE TABLE IF NOT EXISTS users (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
